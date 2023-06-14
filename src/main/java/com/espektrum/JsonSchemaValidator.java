@@ -9,7 +9,7 @@ import org.json.JSONTokener;
 import java.io.InputStream;
 
 /**
- * Hello world!
+ * Simple program to validate JSON files against a JSON Schema
  */
 public class JsonSchemaValidator {
 
@@ -40,7 +40,6 @@ public class JsonSchemaValidator {
             System.out.println("Validation successful!");
         } catch (ValidationException ex) {
             // List validation errors
-            // ex.getAllMessages().forEach(System.out::println);
             System.out.println(ex.toJSON().toString(4));
         } catch (AssertionError | Exception ae) {
             ae.printStackTrace();
