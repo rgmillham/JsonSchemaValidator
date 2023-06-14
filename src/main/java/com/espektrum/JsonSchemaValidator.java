@@ -41,8 +41,8 @@ public class JsonSchemaValidator {
         } catch (ValidationException ex) {
             // List validation errors
             System.out.println(ex.toJSON().toString(4));
-        } catch (AssertionError | Exception ae) {
-            ae.printStackTrace();
+        } catch (AssertionError | Exception ex) {
+            ex.printStackTrace();
         }
     }
 }
