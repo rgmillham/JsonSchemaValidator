@@ -1,0 +1,7 @@
+{
+  "employee": {
+    "firstName": "Lance",
+    "lastName": "Simpson",
+    "employeeType": "Salaried"
+  }
+}

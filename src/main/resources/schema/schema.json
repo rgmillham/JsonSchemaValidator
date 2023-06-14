@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "schema",
+  "description": "Test Schema",
+  "type": "object",
+  "id": "test::schema",
+  "definitions": {
+    "Employee": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]{1,24}$"
+        },
+        "middleName": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]{1,24}$"
+        },
+        "lastName": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]{1,24}$"
+        },
+        "employeeType": {
+          "$ref": "#/definitions/EmployeeType"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "employeeType"
+      ]
+    },
+    "EmployeeType": {
+      "enum": [
+        "Salaried",
+        "Hourly",
+        "Contractor",
+        "Temp"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "employee": {
+      "$ref": "#/definitions/Employee"
+    }
+  },
+  "required": [
+    "employee"
+  ]
+}
