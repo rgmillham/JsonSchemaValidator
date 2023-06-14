@@ -10,15 +10,15 @@
       "properties": {
         "firstName": {
           "type": "string",
-          "pattern": "^[a-zA-Z]{1,24}$"
+          "pattern": "^[a-zA-Z'-]{1,50}$"
         },
         "middleName": {
           "type": "string",
-          "pattern": "^[a-zA-Z]{1,24}$"
+          "pattern": "^[a-zA-Z'-]{1,50}$"
         },
         "lastName": {
           "type": "string",
-          "pattern": "^[a-zA-Z]{1,24}$"
+          "pattern": "^[a-zA-Z'-]{1,50}$"
         },
         "employeeType": {
           "$ref": "#/definitions/EmployeeType"
